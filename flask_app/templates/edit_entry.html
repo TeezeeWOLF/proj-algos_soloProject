@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/journal/{{session.user_id}}">Journal</a>
+    <a href="/home">Home</a>
+    <a href="/logout">Logout</a>
+    <h1>Edit your Entry</h1>
+    
+    <form action="/edit/entry/{{entry.id}}" method="post">
+        <input type="hidden" name="user_id" value="{{session.user_id}}">
+        <input type="hidden" name="id" value="{{entry.id}}">
+        <input type="text" name="title" value="{{entry.title}}">
+        <textarea name="journal_content" cols="30" rows="10">{{entry.journal_content}}</textarea>
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/journal/entry">New Entry</a>
+    <a href="/home">Home</a>
+    <a href="/logout">Logout</a>
+    <table id="journal_table">
+        <thead>
+            <th>Title</th>
+            <th>Date</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </thead>
+            {% for entry in journals: %}
+            <tr>
+                <td>{{entry.title}}</td>
+                <td>{{entry.created_at}}</td>
+                <td><a href="/view/entry/{{entry.id}}">View</a> </td>
+                <td><a href="/edit/entry/{{entry.id}}">Edit</a></td>
+                <td><a href="/journals/delete/{{entry.id}}">Delete</a></td>             
+            </tr>
+            {% endfor %}
+</body>
+</html>

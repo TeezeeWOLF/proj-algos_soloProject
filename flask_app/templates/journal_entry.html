@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/journal/{{session.user_id}}">Journal</a>
+    <a href="/home">Home</a>
+    <a href="/logout">Logout</a>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p>{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <h1>Make a new entry in your journal</h1>
+    <p>(Optional prompt: {{prompt.prompt}})</p>
+    <div>
+        <form action="/journal/entry" method="post" id="entry_form">
+            <input type="hidden" name="user_id" value="{{session.user_id}}">
+            <div>
+                <input type="text" name="title" placeholder="title (min 45characters)">
+            </div>
+            <div>
+                <textarea name="journal_content" cols="100" rows="20" placeholder="journal entry.."></textarea>
+            </div>
+            <input type="submit" value="Add to Journal">
+        </form>
+    </div>
+</body>
+</html>

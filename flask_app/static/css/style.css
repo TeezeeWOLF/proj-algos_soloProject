@@ -1,0 +1,97 @@
+html {
+        background-image: url("https://lp-cms-production.imgix.net/2021-02/GettyRF_621962730.jpg?auto=format&q=75&w=1920");
+        background-color: #cccccc;
+}
+
+h1{
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+button {
+        background-color: #ffffff; /* Green */
+        color: rgb(0, 0, 0);
+        padding: 10px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-left: 25px;
+    }
+button:hover{
+    background-color: #edf3f5; /* Green */
+}
+
+
+a{
+    color: cornflowerblue;
+}
+p{
+    color: floralwhite;
+
+    
+    font-style: initial;
+    font-variant: unset;
+
+}
+
+#journal_table{
+    justify-content: center;
+    background-color: white;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 150px;
+
+}
+
+#view_entry_title{
+    justify-content: center;
+    color: bisque;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 15px;
+
+}
+
+#view_entry_content{
+    color: rgb(239, 157, 57);
+background-color: azure;
+}
+
+#entry_form{
+    justify-content: center;
+    color: bisque;
+    margin: auto;
+    margin-top: 50px;
+    margin-left: 80px;
+}
+
+#affirm_button{
+    justify-content: center;
+    margin-top: 15%;
+    margin-left: 43%;
+    
+
+}
+
+#new_affirm_button{
+    justify-content: center;
+    margin-left: 40%;
+}
+
+
+#affirmation_div{
+    font-family:'Courier New', Courier, monospace ;
+    font-size: x-large;
+    justify-content: center;
+    margin-top: 10%;
+    margin-left: 380px;
+}
+
+#home_actions{
+    justify-content: baseline;
+    margin-bottom: 50px;
+    margin-left: 1250px;
+    background-color: rgba(0, 0, 0, 0.5);
+}

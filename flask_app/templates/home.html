@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <div id="home_actions">
+        <h1 id="home_title">Turn a New Leaf.</h1>
+        <div>
+            <a href="/journal/{{session.user_id}}">Journal</a>
+            <a href="/journal/entry">New Entry</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </div>
+    <div id="affirm_button">
+        <a href="/affirm"><button>affirm</button></a>
+    </div>
+
+</body>
+</html>
